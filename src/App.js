@@ -2,11 +2,11 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import { BrowserRouter ,Routes,Route } from 'react-router-dom'
-import NavBar from './NavBar'
-import Feed from './Feed'
-import VideoDetail from './VideoDetail'
-import ChannelDetail from './ChannelDetail'
-import SearchFeed from './SearchFeed'
+import NavBar from './components/NavBar'
+import VideoDetail from './components/VideoDetail'
+import ChannelDetail from './components/ChannelDetail'
+import SearchFeed from './components/SearchFeed'
+import Feed from './components/Feed'
 
 const App = () => (
     <BrowserRouter>
