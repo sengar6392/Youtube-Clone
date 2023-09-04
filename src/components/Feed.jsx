@@ -6,14 +6,18 @@ import Videos from "./Videos";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
-  const [videos, setVideos] = useState("null");
+  const [videos, setVideos] = useState(null);
+
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
-    )
+    console.log('selectedCategory',selectedCategory);
+    console.log('before videos',videos);
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+      .then((data) => setVideos(data.items))
     
-  }, [selectedCategory]);
-  // console.log("videos", videos);
+    console.log('after selectedCategory',selectedCategory);
+    console.log('after videos',videos);
+    }, [selectedCategory]);
+
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -30,6 +34,7 @@ const Feed = () => {
           {selectedCategory} Videos
         </Typography>
         <Videos videos={videos}/>
+        
       </Box>
     </Stack>
   );
