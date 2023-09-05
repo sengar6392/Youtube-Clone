@@ -9,13 +9,8 @@ const Feed = () => {
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
-    // console.log('selectedCategory',selectedCategory);
-    // console.log('before videos',videos);
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
-    
-    // console.log('after selectedCategory',selectedCategory);
-    // console.log('after videos',videos);
     }, [selectedCategory]);
 
   return (

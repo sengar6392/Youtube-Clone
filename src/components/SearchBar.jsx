@@ -7,7 +7,7 @@ const SearchBar = () => {
     <Paper
       component="form"
       onSubmit={() => {}}
-      sx={{ borderRadius: 20, border: "1px solid #e3e3e3", boxShadow: "none"}}
+      sx={{ borderRadius: "50px", border: "1px solid #e3e3e3", boxShadow: "none",px:"10px"}}
     >
       <input className="search-bar" placeholder="Search...."/>
       <IconButton type="sumbit" sx={{p:"10px"}}>
