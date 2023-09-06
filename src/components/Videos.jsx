@@ -3,10 +3,10 @@ import React from 'react'
 import VideoCard from './VideoCard';
 import ChannelCard from './ChannelCard';
 
-const Videos = ({videos}) => {
+const Videos = ({videos,direction}) => {
     if(videos!==null)
   return (
-    <Stack direction="row" flexWrap="wrap" gap={2}>
+    <Stack direction={direction || "row"} flexWrap="wrap" gap={2}>
         {
             videos.map((item,idx)=>{
                 return(
